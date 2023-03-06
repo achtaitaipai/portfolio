@@ -16,5 +16,66 @@
     "technologies": "typescript",
     "description": "Pixynth permet de réaliser des dessins et des animations avec peu de pixels",
     "url": "https://achtaitaipai.github.io/pixynth"
+  },
+  {
+    "title": "Dedale",
+    "type": "librairie",
+    "date": 2023,
+    "mobile": "non",
+    "technologies": "typescript, vite",
+    "description": "vite-plugin-dedale est un plugin pour vite qui aide à créer des sites statiques.",
+    "url": "https://github.com/achtaitaipai/vite-plugin-dedale"
+  },
+  {
+    "title": "Daedalus-s-blog",
+    "type": "site",
+    "date": 2023,
+    "mobile": "oui",
+    "description": "Le blog que tenait Dédale avant son décès en -500. ",
+    "url": "https://achtaitaipai.github.io/daedalus-s-blog/"
+  },
+  {
+    "title": "Ear breaker",
+    "type": "application",
+    "date": 2020,
+    "mobile": "non",
+    "technologies": "js",
+    "description": "Une application pour synthétiser des bruits.",
+    "url": "https://achtaitaipai.itch.io/ear-breaker"
+  },
+  {
+    "title": "Tyler",
+    "type": "application",
+    "date": 2023,
+    "mobile": "non",
+    "technologies": "react",
+    "description": "Une application pour dessiner à partir de 'tiles'.",
+    "url": "https://achtaitaipai.github.io/tyler/"
+  },
+  {
+    "title": "Emojis stamper",
+    "type": "application",
+    "date": 2020,
+    "mobile": "non",
+    "technologies": "js",
+    "description": "Une application pour dessiner à partir d'emojis'.",
+    "url": "https://achtaitaipai.itch.io/emojis"
+  },
+  {
+    "title": "Ariane-router",
+    "type": "application",
+    "date": 2020,
+    "mobile": "non",
+    "technologies": "js",
+    "description": "Une librairie pour permettre une navigation côté client sur un site statique.",
+    "url": "https://github.com/achtaitaipai/ariane-router"
+  },
+  {
+    "title": "Sarah Penanhoat",
+    "type": "site",
+    "date": 2023,
+    "mobile": "oui",
+    "description": "Le site de Sarah Penanhoat",
+    "url": "https://sarahpenanhoat.netlify.app"
   }
 ]

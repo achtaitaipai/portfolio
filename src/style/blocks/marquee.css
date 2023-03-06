@@ -2,7 +2,7 @@
   display: flex;
   overflow: hidden;
   user-select: none;
-  width: max(40em, 200%);
+  width: max(60em, 200%);
 }
 
 .marquee span {

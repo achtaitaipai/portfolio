@@ -16,5 +16,5 @@ export default defineConfig({
       ],
     }),
   ],
-  base: "https://achtaitaipai.github.io/portfolio",
+  // base: "https://achtaitaipai.github.io/portfolio",
 });
