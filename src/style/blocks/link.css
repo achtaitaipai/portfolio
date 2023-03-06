@@ -1,0 +1,29 @@
+.link {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.link span {
+  display: inline-block;
+  position: relative;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  text-decoration: underline;
+  transition: transform 0.2s ease-in;
+}
+
+.link span::before {
+  content: "#";
+}
+
+.link span::after {
+  content: "# " attr(data-content);
+  position: absolute;
+  left: 0;
+  text-decoration: underline;
+  top: 100%;
+}
+
+.link:where(:hover, :focus) span {
+  transform: translate(0, -100%);
+}

@@ -1,0 +1,56 @@
+.contact-link {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.contact-link_content {
+  position: relative;
+  display: grid;
+  fill: black;
+  border: 4px solid black;
+  background-color: white;
+}
+.contact-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 1rem;
+  top: 1rem;
+  background-color: black;
+  transform: translate(-1rem, -1rem);
+  transition: transform 0.2s;
+}
+
+.contact-link svg {
+  width: 15rem;
+  height: 15rem;
+  padding: var(--size-3);
+  transition: transform 0.2s;
+}
+
+.contact-link_text {
+  background-color: white;
+  z-index: 1;
+  text-align: center;
+  font-weight: bold;
+  border-top: 2px solid black;
+  padding-block: var(--size-2);
+}
+
+.contact-link:where(:hover, :focus) .contact-link_text {
+  color: white;
+  background-color: black;
+}
+
+.contact-link:where(:hover, :focus) svg {
+  transform: rotate(8deg) scale(0.8);
+}
+
+.contact-link:where(:hover, :focus) {
+  transform: translate(-1rem, -1rem);
+}
+
+.contact-link:where(:hover, :focus)::before {
+  transform: translate(0, 0);
+}

@@ -1,0 +1,39 @@
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: max(40em, 200%);
+}
+
+.marquee span {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 16.5%;
+  animation: translate-x 4s linear infinite;
+  text-align: center;
+}
+
+.marquee span::after {
+  content: "~";
+  position: absolute;
+  left: 0;
+}
+
+.marquee[data-direction="left"] span {
+  animation-direction: reverse;
+  transform: skew(0, -3deg);
+}
+
+:where([open], summary:where(:hover, :focus)) .marquee span {
+  animation-play-state: paused;
+}
+
+@keyframes translate-x {
+  from {
+    translate: -100% 0;
+  }
+  to {
+    translate: 0 0;
+  }
+}

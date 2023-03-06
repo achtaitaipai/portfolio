@@ -1,0 +1,18 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  border-bottom: 4px solid black;
+  /* -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px); */
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,43 @@
+details {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  transform: skewY(-1.5deg);
+}
+
+details:first-of-type {
+  border-top: 2px solid black;
+}
+
+details::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
+}
+
+details summary {
+  --padding-left: 8rem;
+  --marker-weight: 8px;
+  --marker-length: 2rem;
+  position: relative;
+  cursor: pointer;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: bold;
+  transition: color 0.2s, background-color 0.2s;
+  padding: 0;
+  white-space: nowrap;
+  background-color: white;
+}
+details summary:where(:hover, :focus),
+details[open] summary {
+  background-color: black;
+  color: white;
+}
+
+details summary::marker {
+  display: none;
+  content: "";
+}

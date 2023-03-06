@@ -1,0 +1,7 @@
+.presentation {
+  --flow-size: var(--size-6);
+}
+
+.presentation_content {
+  width: fit-content;
+}

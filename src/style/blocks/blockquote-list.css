@@ -1,0 +1,23 @@
+.blockquote-list {
+  --reel-columns: 3;
+  padding-block-end: var(--size-8);
+}
+
+.blockquote-list::-webkit-scrollbar {
+  height: 1.5rem;
+}
+
+/* Track */
+.blockquote-list::-webkit-scrollbar-track {
+  border: 3px solid black;
+}
+
+/* Handle */
+.blockquote-list::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+.blockquote-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

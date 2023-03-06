@@ -1,0 +1,12 @@
+.project-details_list {
+  margin: 0;
+  padding: 0;
+  --switcher-width: 10rem;
+}
+
+.project-details_list li {
+  display: flex;
+  gap: var(--size-8);
+  justify-content: space-between;
+  white-space: nowrap;
+}

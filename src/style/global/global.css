@@ -1,0 +1,31 @@
+body {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+p {
+  max-width: 60ch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-mono);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+section h2 {
+  margin-bottom: var(--size-6);
+}
+
+body {
+  padding-bottom: var(--size-6);
+}

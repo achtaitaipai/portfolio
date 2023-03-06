@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Abbé Pierre",
+    "quote": "Vraiment super sympa ce type !",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/ABBE_PIERRE-1999Without.jpg/260px-ABBE_PIERRE-1999Without.jpg"
+  },
+  {
+    "name": "Mohamed Ali",
+    "quote": "Il n' y a que deux personnes qui me font peur : Dieu et Charles Cailleteau.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Muhammad_Ali_NYWTS.jpg/280px-Muhammad_Ali_NYWTS.jpg"
+  },
+  {
+    "name": "Mark Zuckerberg",
+    "quote": "Sans lui je serai juste un inconnu mal habillé.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Mark_Zuckerberg_F8_2018_Keynote_%28cropped%29.jpg/260px-Mark_Zuckerberg_F8_2018_Keynote_%28cropped%29.jpg"
+  },
+  {
+    "name": "Elon Musk",
+    "quote": "Si seulement j'avais son sens du business...",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/200px-Elon_Musk_Royal_Society.jpg"
+  },
+  {
+    "name": "Rocco Siffredi",
+    "quote": "Je me sens si petit à ses côtés !",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Rocco_Siffredi_-_Lucca_Comics_%26_Games_2016.jpg/220px-Rocco_Siffredi_-_Lucca_Comics_%26_Games_2016.jpg"
+  }
+]

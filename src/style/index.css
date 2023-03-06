@@ -1,0 +1,20 @@
+@import "./global/variables.css";
+@import "./global/reset.css";
+@import "./global/global.css";
+
+@import "./composition/index.css";
+
+@import "./blocks/funny-link.css";
+@import "./blocks/nav.css";
+@import "./blocks/accordion.css";
+@import "./blocks/marquee.css";
+@import "./blocks/project-details.css";
+@import "./blocks/presentation.css";
+@import "./blocks/button.css";
+@import "./blocks/blockquote-list.css";
+@import "./blocks/blockquote.css";
+@import "./blocks/contact-card.css";
+@import "./blocks/link.css";
+
+@import "./utility/index.css";
+@import "./utility/spaces.css";

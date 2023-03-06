@@ -1,0 +1,48 @@
+<details is="animated-accordion" duration="300" easing="ease-in" >
+	<summary>
+	  <span class="marquee" data-direction="{{index % 2 === 0 ? "left" : ""}}">
+		<span>{{project.title}}</span>
+		<span aria-hidden="true">{{project.title}}</span>
+		<span aria-hidden="true">{{project.title}}</span>
+		<span aria-hidden="true">{{project.title}}</span>
+		<span aria-hidden="true">{{project.title}}</span>
+		<span aria-hidden="true">{{project.title}}</span>
+	  </span>
+	</summary>
+	<div class="sidebar | main-width m-auto gap-9 p-b-5">
+	  <div class="switcher | project-details | gap-9">
+		<ul role="list" class="project-details_list">
+		  @if(project.type)
+		  <li>
+			<strong>type :&nbsp;</strong>
+			{{project.type}}</li>
+		  <li>
+		  @end
+		  @if(project.date)
+		  <li>
+			<strong>date :&nbsp;</strong>
+			{{project.date}}</li>
+		  <li>
+		  @end
+		  @if(project.mobile)
+		  <li>
+			<strong>mobile :&nbsp;</strong>
+			{{project.mobile}}</li>
+		  <li>
+		  @end
+		  @if(project.technologies)
+		  <li>
+			<strong>technologies :&nbsp;</strong>
+			{{project.technologies}}</li>
+		  <li>
+		  @end
+		</ul>
+		<p class="project-details_text">
+		  {{project.description}}  
+		</p>
+	  </div>
+	  <div class="items-center">
+		<a href="{{project.url}}" target="_blank" class="button">Visiter</a>
+	  </div>
+	</div>
+  </details>

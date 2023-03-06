@@ -1,0 +1,46 @@
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.float-right {
+  float: right;
+}
+
+.dashed-section {
+  position: relative;
+  --border-size: 2rem;
+  /* padding-left: calc(var(--border-size) * 2); */
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.dashed-section::after {
+  content: " ";
+  position: absolute;
+  width: var(--border-size);
+  right: calc(100% + var(--size-6));
+  top: 0;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    45deg,
+    #fafafa 25%,
+    #050505 25%,
+    #050505 50%,
+    #fafafa 50%,
+    #fafafa 75%,
+    #050505 75%,
+    #050505 100%
+  );
+  background-size: var(--border-size) var(--border-size);
+}
