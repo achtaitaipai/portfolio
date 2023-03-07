@@ -1,15 +1,19 @@
-export type Tokens = { [key: string]: string };
-export type TokensLists = { [key: string]: Tokens };
 type utilityAction = (tokenName: string) => string;
-export type Utility = {
+type Utility = {
   selector: string | utilityAction;
   property: string;
-  tokens: Tokens;
+};
+
+export type TokenValues = { [key: string]: string };
+
+export type TokenGroup = {
+  variablesPrefix?: string;
+  values: TokenValues;
+  utilities?: Utility[];
 };
 
 export type Config = {
   outDir: string;
   fileName: string;
-  variables?: TokensLists;
-  utilities?: Utility[];
+  tokens: TokenGroup[];
 };

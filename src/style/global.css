@@ -1,8 +1,14 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 10rem;
+}
 body {
   font-family: var(--font-sans);
   font-size: 1.4rem;
   line-height: 1.5;
   background-color: var(--clr-neutral-1);
+  overflow-x: hidden;
+  color: var(--clr-neutral-12);
 }
 
 p {

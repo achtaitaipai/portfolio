@@ -1,11 +1,14 @@
 .funny-link {
   position: relative;
+  display: inline-block;
+  white-space: nowrap;
 }
 .funny-link picture {
   display: none;
   position: absolute;
-  left: 100%;
-  min-width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
   height: 300px;
   transform-origin: top;
   animation: appear 0.3s ease-out;
@@ -26,11 +29,11 @@
 
 @keyframes appear {
   0% {
-    transform: translateY(-2rem) scaleY(0);
+    transform: translate(-50%, -2rem) scaleY(0);
     opacity: 0;
   }
   80% {
-    transform: translateY(0) scaleY(1);
+    transform: translate(-50%, 0) scaleY(1);
   }
   100% {
     opacity: 1;
@@ -47,4 +50,10 @@
   color: red;
   background-image: url('data:image/svg+xml;charset=utf8,<svg id="squiggle-link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" viewBox="0 0 20 4" > <style type="text/css"> .squiggle { animation: shift 0.5s linear infinite; } @keyframes shift { from { transform: translateX(0); } to { transform: translateX(-20px); } } </style> <path fill="none" stroke="black" stroke-width="1" class="squiggle" d="M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3" /> </svg>');
   background-repeat: repeat-x;
+}
+
+@media (prefers-color-scheme: dark) {
+  .funny-link:where(:hover, :focus)::after {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg id="squiggle-link" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" viewBox="0 0 20 4" > <style type="text/css"> .squiggle { animation: shift 0.5s linear infinite; } @keyframes shift { from { transform: translateX(0); } to { transform: translateX(-20px); } } </style> <path fill="none" stroke="white" stroke-width="1" class="squiggle" d="M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3" /> </svg>');
+  }
 }

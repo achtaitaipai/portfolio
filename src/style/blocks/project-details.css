@@ -13,5 +13,6 @@
 }
 
 .project-details_list em {
-  /* white-space: break-spaces; */
+  white-space: normal;
+  text-align: right;
 }

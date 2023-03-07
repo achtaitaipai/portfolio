@@ -1,0 +1,17 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-neutral-0: var(--dark-clr-neutral-0);
+    --clr-neutral-1: var(--dark-clr-neutral-1);
+    --clr-neutral-2: var(--dark-clr-neutral-2);
+    --clr-neutral-3: var(--dark-clr-neutral-3);
+    --clr-neutral-4: var(--dark-clr-neutral-4);
+    --clr-neutral-5: var(--dark-clr-neutral-5);
+    --clr-neutral-6: var(--dark-clr-neutral-6);
+    --clr-neutral-7: var(--dark-clr-neutral-7);
+    --clr-neutral-8: var(--dark-clr-neutral-8);
+    --clr-neutral-9: var(--dark-clr-neutral-9);
+    --clr-neutral-10: var(--dark-clr-neutral-10);
+    --clr-neutral-11: var(--dark-clr-neutral-11);
+    --clr-neutral-12: var(--dark-clr-neutral-12);
+  }
+}

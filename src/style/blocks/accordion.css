@@ -26,12 +26,13 @@ details summary {
   font-size: clamp(4rem, 8vw, 7rem);
   font-weight: var(--font-weight-9);
   transition: color 0.2s, background-color 0.2s;
+  background-color: var(--clr-neutral-1);
   padding: 0;
   white-space: nowrap;
 }
 details summary:where(:hover, :focus),
 details[open] summary {
-  background-color: var(--clr-neutral-12) !important;
+  background-color: var(--clr-neutral-12);
   color: var(--clr-neutral-0);
 }
 

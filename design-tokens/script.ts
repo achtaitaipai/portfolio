@@ -1,161 +1,135 @@
-import { join } from "node:path";
-import { writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
-import type { Config } from "./types";
+import { mkdir, writeFile } from "node:fs/promises";
+import { join } from "node:path";
 import {
-  size,
-  fluidSize,
-  fontSize,
-  readingSize,
   clr,
+  darkColors,
+  fluidSize,
   font,
+  fontSize,
   fontWeight,
-  zIndex,
+  readingSize,
+  size,
 } from "./tokens";
+import type { Config, TokenGroup, TokenValues } from "./types";
 
 const config: Config = {
   outDir: "src/style",
   fileName: "tokens",
-  variables: {
-    clr,
-    size,
-    fluidSize,
-    font,
-    fontWeight,
-    fontSize,
-    readingSize,
-    zIndex,
-  },
-  utilities: [
+  tokens: [
     {
-      selector: "clr",
-      property: "color",
-      tokens: clr,
+      variablesPrefix: "clr",
+      values: clr,
+      utilities: [
+        {
+          property: "color",
+          selector: "color",
+        },
+        {
+          property: "background-color",
+          selector: "bg",
+        },
+      ],
     },
     {
-      selector: "bg",
-      property: "background-color",
-      tokens: clr,
+      variablesPrefix: "dark-clr",
+      values: darkColors,
     },
     {
-      selector: "font",
-      property: "font-family",
-      tokens: font,
+      variablesPrefix: "font",
+      values: font,
     },
     {
-      selector: "font-size",
-      property: "font-size",
-      tokens: fontSize,
+      variablesPrefix: "font-weight",
+      values: fontWeight,
+      utilities: [{ property: "font-weight", selector: "font-weight" }],
     },
     {
-      selector: "font-weight",
-      property: "font-weight",
-      tokens: fontWeight,
+      variablesPrefix: "font-size",
+      values: fontSize,
+      utilities: [{ property: "font-size", selector: "font-size" }],
     },
     {
-      selector: "reading-size",
-      property: "max-inline-size",
-      tokens: readingSize,
+      variablesPrefix: "reading-size",
+      values: readingSize,
     },
     {
-      selector: "content-size",
-      property: "width",
-      tokens: fluidSize,
+      variablesPrefix: "fluid-size",
+      values: fluidSize,
     },
     {
-      selector: "padding",
-      property: "padding",
-      tokens: size,
-    },
-    {
-      selector: "margin",
-      property: "margin",
-      tokens: size,
-    },
-    {
-      selector: "padding-inline",
-      property: "padding-inline",
-      tokens: size,
-    },
-    {
-      selector: "margin-inline",
-      property: "margin-inline",
-      tokens: size,
-    },
-    {
-      selector: "padding-inline-start",
-      property: "padding-inline-start",
-      tokens: size,
-    },
-    {
-      selector: "margin-inline-start",
-      property: "margin-inline-start",
-      tokens: size,
-    },
-    {
-      selector: "padding-inline-end",
-      property: "padding-inline-end",
-      tokens: size,
-    },
-    {
-      selector: "margin-inline-end",
-      property: "margin-inline-end",
-      tokens: size,
-    },
-    {
-      selector: "padding-block",
-      property: "padding-block",
-      tokens: size,
-    },
-    {
-      selector: "margin-block",
-      property: "margin-block",
-      tokens: size,
-    },
-    {
-      selector: "padding-block-start",
-      property: "padding-block-start",
-      tokens: size,
-    },
-    {
-      selector: "margin-block-start",
-      property: "margin-block-start",
-      tokens: size,
-    },
-    {
-      selector: "padding-block-end",
-      property: "padding-block-end",
-      tokens: size,
-    },
-    {
-      selector: "margin-block-end",
-      property: "margin-block-end",
-      tokens: size,
-    },
-    {
-      selector: "gap",
-      property: "gap",
-      tokens: size,
-    },
-    {
-      selector: "row-gap",
-      property: "row-gap",
-      tokens: size,
-    },
-    {
-      selector: "column-gap",
-      property: "column-gap",
-      tokens: size,
-    },
-    {
-      selector: (tokenName) => `.flow-block-${tokenName} > * + *`,
-      property: "margin-block-start",
-      tokens: size,
-    },
-    {
-      selector: (tokenName) => `.flow-inline-${tokenName} > * + *`,
-      property: "margin-inline-start",
-      tokens: size,
+      variablesPrefix: "size",
+      values: size,
+      utilities: [
+        {
+          selector: "padding",
+          property: "padding",
+        },
+        {
+          selector: "padding-inline",
+          property: "padding-inline",
+        },
+        {
+          selector: "padding-block",
+          property: "padding-block",
+        },
+        {
+          selector: "padding-inline-start",
+          property: "padding-inline-start",
+        },
+        {
+          selector: "padding-block-start",
+          property: "padding-block-start",
+        },
+        {
+          selector: "padding-inline-end",
+          property: "padding-inline-end",
+        },
+        {
+          selector: "padding-block-end",
+          property: "padding-block-end",
+        },
+        {
+          selector: "margin",
+          property: "margin",
+        },
+        {
+          selector: "margin-inline",
+          property: "margin-inline",
+        },
+        {
+          selector: "margin-block",
+          property: "margin-block",
+        },
+        {
+          selector: "margin-inline-start",
+          property: "margin-inline-start",
+        },
+        {
+          selector: "margin-block-start",
+          property: "margin-block-start",
+        },
+        {
+          selector: "margin-inline-end",
+          property: "margin-inline-end",
+        },
+        {
+          selector: "margin-block-end",
+          property: "margin-block-end",
+        },
+        {
+          selector: "gap",
+          property: "gap",
+        },
+        {
+          selector: (tokenName) => `.flow-block-${tokenName} > * + *`,
+          property: "margin-block-start",
+        },
+        {
+          selector: (tokenName) => `.flow-inline-${tokenName} > * + *`,
+          property: "margin-inline-start",
+        },
+      ],
     },
   ],
 };
@@ -163,45 +137,42 @@ const config: Config = {
 const main = async () => {
   if (!existsSync(config.outDir)) await mkdir(config.outDir);
   const outPath = join(config.outDir, config.fileName + ".css");
-  const fileContent = generateVariables() + generateUtilities();
-  await writeFile(outPath, fileContent);
+  await writeFile(outPath, fileContent(config.tokens));
 };
 
-const generateVariables = () => {
-  const { variables } = config;
-  if (!variables) return "";
-  let out = ":root{";
-  for (const [prefix, tokenList] of Object.entries(variables)) {
-    for (const [name, value] of Object.entries(tokenList)) {
-      out += `--${formatVariablePrefix(prefix)}-${name}:${value};`;
+const fileContent = (tokens: TokenGroup[]) => {
+  let variablesContent = ":root{";
+  let utilitiesContent = "";
+  tokens.forEach(({ values, variablesPrefix, utilities }) => {
+    if (variablesPrefix) {
+      iterateTokens(values, (name, value) => {
+        variablesContent += `--${variablesPrefix}-${name}:${value};`;
+      });
     }
+    utilities?.forEach(({ selector, property }) => {
+      iterateTokens(values, (name, value) => {
+        const selectorValue =
+          typeof selector === "string"
+            ? `.${selector}-${name}`
+            : `${selector(name)}`;
+        const tokenValue = variablesPrefix
+          ? `var(--${variablesPrefix}-${name})`
+          : value;
+        utilitiesContent += `${selectorValue}{${property}:${tokenValue};}`;
+      });
+    });
+  });
+  variablesContent += "}";
+  return variablesContent + utilitiesContent;
+};
+
+const iterateTokens = (
+  tokens: TokenValues,
+  callback: (name: string, value: string) => void
+) => {
+  for (const token of Object.entries(tokens)) {
+    callback(...token);
   }
-  out += "}";
-  return out;
 };
-
-const generateUtilities = () => {
-  const { utilities } = config;
-  if (!utilities) return "";
-  let out = utilities.reduce(
-    (current, { selector: name, property, tokens }) => {
-      let utilitie = "";
-      for (const [tokenName, value] of Object.entries(tokens)) {
-        if (typeof name === "string")
-          utilitie += `.${name}-${tokenName}{${property}:${value};}`;
-        else {
-          utilitie += `${name(tokenName)}{${property}:${value};}`;
-        }
-      }
-
-      return current + utilitie;
-    },
-    ""
-  );
-  return out;
-};
-
-const formatVariablePrefix = (prefix: string) =>
-  prefix.replace(/[A-Z]/g, (letter) => "-" + letter.toLowerCase());
 
 main();

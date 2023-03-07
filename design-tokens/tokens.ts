@@ -1,3 +1,5 @@
+import { TokenValues } from "./types";
+
 export const size = {
   1: " .25rem",
   2: " .5rem",
@@ -48,6 +50,15 @@ export const clr = {
   "neutral-12": "#030507",
 };
 
+export const darkColors = Object.entries(clr).reduce<TokenValues>(
+  (result, entrie, index) => {
+    const [key, value] = entrie;
+    const name = key.replace(/[0-9]+/, () => (12 - index).toString());
+    return { ...result, ...{ [name]: value } };
+  },
+  {}
+);
+
 export const font = {
   sans: " system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif",
   serif: " ui-serif, serif",
@@ -64,13 +75,4 @@ export const fontWeight = {
   7: "700",
   8: "800",
   9: "900",
-};
-
-export const zIndex = {
-  0: "-1",
-  1: "1",
-  2: "2",
-  3: "3",
-  4: "4",
-  5: "5",
 };
