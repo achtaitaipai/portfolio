@@ -7,7 +7,7 @@
   display: inline-block;
   position: relative;
   font-family: var(--font-mono);
-  font-weight: bold;
+  font-weight: var(--font-weight-8);
   text-decoration: underline;
   transition: transform 0.2s ease-in;
 }

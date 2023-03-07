@@ -1,5 +1,5 @@
-<details is="animated-accordion" duration="300" easing="ease-in" open>
-	<summary>
+<details is="animated-accordion" duration="300" easing="ease-in" class="bg-neutral-2">
+	<summary class="bg-neutral-1">
 	  <span class="marquee" data-direction="{{index % 2 === 0 ? "left" : ""}}">
 		<span>{{project.title}}</span>
 		<span aria-hidden="true">{{project.title}}</span>
@@ -9,32 +9,28 @@
 		<span aria-hidden="true">{{project.title}}</span>
 	  </span>
 	</summary>
-	<div class="sidebar | main-width m-auto gap-9 p-b-5">
+	<div class="sidebar | wrapper gap-9 padding-block-9">
 	  <div class="switcher | project-details | gap-9">
 		<ul role="list" class="project-details_list">
 		  @if(project.type)
 		  <li>
 			<strong>type :&nbsp;</strong>
-			{{project.type}}</li>
-		  <li>
+			<em>{{project.type}}</em></li>
 		  @end
 		  @if(project.date)
 		  <li>
 			<strong>date :&nbsp;</strong>
-			{{project.date}}</li>
-		  <li>
+			<em>{{project.date}}</em></li>
 		  @end
 		  @if(project.mobile)
 		  <li>
 			<strong>mobile :&nbsp;</strong>
-			{{project.mobile}}</li>
-		  <li>
+			<em>{{project.mobile}}</em></li>
 		  @end
 		  @if(project.technologies)
 		  <li>
 			<strong>technologies :&nbsp;</strong>
-			{{project.technologies}}</li>
-		  <li>
+			<em>{{project.technologies}}</em></li>
 		  @end
 		</ul>
 		<p class="project-details_text">

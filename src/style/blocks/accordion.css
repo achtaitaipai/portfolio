@@ -1,12 +1,11 @@
 details {
   position: relative;
   overflow: hidden;
-  background-color: #f0f0f0;
   transform: skewY(-1.5deg);
 }
 
 details:first-of-type {
-  border-top: 2px solid black;
+  border-top: 2px solid var(--clr-neutral-12);
 }
 
 details::after {
@@ -15,7 +14,7 @@ details::after {
   width: 100%;
   bottom: 0;
   height: 2px;
-  background-color: black;
+  background-color: var(--clr-neutral-12);
 }
 
 details summary {
@@ -25,16 +24,15 @@ details summary {
   position: relative;
   cursor: pointer;
   font-size: clamp(4rem, 8vw, 7rem);
-  font-weight: bold;
+  font-weight: var(--font-weight-9);
   transition: color 0.2s, background-color 0.2s;
   padding: 0;
   white-space: nowrap;
-  background-color: white;
 }
 details summary:where(:hover, :focus),
 details[open] summary {
-  background-color: black;
-  color: white;
+  background-color: var(--clr-neutral-12) !important;
+  color: var(--clr-neutral-0);
 }
 
 details summary::marker {

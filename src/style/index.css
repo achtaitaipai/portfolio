@@ -1,8 +1,11 @@
-@import "./global/variables.css";
-@import "./global/reset.css";
-@import "./global/global.css";
+@import "./reset.css";
+@import "./global.css";
 
 @import "./composition/index.css";
+@import "./composition/sidebar.css";
+@import "./composition/switcher.css";
+@import "./composition/reel.css";
+@import "./composition/fluid-grid.css";
 
 @import "./blocks/funny-link.css";
 @import "./blocks/nav.css";
@@ -13,8 +16,8 @@
 @import "./blocks/button.css";
 @import "./blocks/blockquote-list.css";
 @import "./blocks/blockquote.css";
-@import "./blocks/contact-card.css";
+@import "./blocks/card.css";
 @import "./blocks/link.css";
 
-@import "./utility/index.css";
-@import "./utility/spaces.css";
+@import "./utilities.css";
+@import "./tokens.css";

@@ -14,7 +14,7 @@
     "date": 2022,
     "mobile": "non",
     "technologies": "typescript",
-    "description": "Pixynth permet de réaliser des dessins et des animations avec peu de pixels",
+    "description": "Pixynth permet de réaliser des dessins et des animations avec peu de pixels.",
     "url": "https://achtaitaipai.github.io/pixynth"
   },
   {
@@ -58,7 +58,7 @@
     "date": 2020,
     "mobile": "non",
     "technologies": "js",
-    "description": "Une application pour dessiner à partir d'emojis'.",
+    "description": "Une application pour dessiner à partir d'emojis.",
     "url": "https://achtaitaipai.itch.io/emojis"
   },
   {
@@ -75,7 +75,8 @@
     "type": "site",
     "date": 2023,
     "mobile": "oui",
-    "description": "Le site de Sarah Penanhoat",
+    "technologies": "vite-plugin-dedale, netlify-cms",
+    "description": "Le site de l'artiste Sarah Penanhoat",
     "url": "https://sarahpenanhoat.netlify.app"
   }
 ]

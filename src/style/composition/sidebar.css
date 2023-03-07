@@ -1,0 +1,15 @@
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+.sidebar > :last-child {
+  flex-basis: 20rem;
+  flex-grow: 1;
+}

@@ -1,0 +1,59 @@
+.card {
+  position: relative;
+  transition: transform 0.2s;
+  width: fit-content;
+}
+
+.card_content {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: fit-content;
+  fill: var(--clr-neutral-12);
+  border: 4px solid var(--clr-neutral-12);
+  background-color: var(--clr-neutral-1);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 1rem;
+  top: 1rem;
+  background-color: var(--clr-neutral-12);
+  transform: translate(-1rem, -1rem);
+  transition: transform 0.2s;
+}
+
+.card svg {
+  width: 15rem;
+  height: 15rem;
+  padding: var(--size-3);
+  transition: transform 0.2s;
+}
+
+.card_text {
+  background-color: var(--clr-neutral-1);
+  z-index: 1;
+  text-align: center;
+  font-weight: var(--font-weight-8);
+  border-top: 2px solid var(--clr-neutral-12);
+  padding-block: var(--size-2);
+}
+
+.card:where(:hover, :focus) .card_text {
+  color: var(--clr-neutral-0);
+  background-color: var(--clr-neutral-12);
+}
+
+.card:where(:hover, :focus) svg {
+  transform: rotate(8deg) scale(0.8);
+}
+
+.card:where(:hover, :focus) {
+  transform: translate(-1rem, -1rem);
+}
+
+.card:where(:hover, :focus)::before {
+  transform: translate(0, 0);
+}

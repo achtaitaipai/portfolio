@@ -1,0 +1,10 @@
+.switcher {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.switcher > * {
+  flex: 1;
+  flex-basis: var(--switcher-width, 20rem);
+}

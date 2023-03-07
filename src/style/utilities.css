@@ -1,27 +1,15 @@
-.bold {
-  font-weight: bold;
+.wrapper {
+  width: var(--fluid-size-base);
+  margin-inline: auto;
 }
 
 .italic {
   font-style: italic;
 }
 
-.fit-content {
-  width: fit-content;
-}
-
-.float-right {
-  float: right;
-}
-
 .dashed-section {
   position: relative;
   --border-size: 2rem;
-  /* padding-left: calc(var(--border-size) * 2); */
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .dashed-section::after {

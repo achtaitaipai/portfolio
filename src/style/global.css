@@ -2,24 +2,23 @@ body {
   font-family: var(--font-sans);
   font-size: 1.4rem;
   line-height: 1.5;
+  background-color: var(--clr-neutral-1);
 }
+
 p {
   max-width: 60ch;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-family: var(--font-mono);
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: var(--font-size-heading);
   font-style: italic;
-  line-height: 1.5;
 }
 
 section h2 {

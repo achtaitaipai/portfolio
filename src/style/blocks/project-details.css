@@ -1,7 +1,8 @@
 .project-details_list {
   margin: 0;
   padding: 0;
-  --switcher-width: 10rem;
+  --switcher-width: 20rem;
+  max-width: 100%;
 }
 
 .project-details_list li {
@@ -9,4 +10,8 @@
   gap: var(--size-8);
   justify-content: space-between;
   white-space: nowrap;
+}
+
+.project-details_list em {
+  /* white-space: break-spaces; */
 }

@@ -1,5 +1,6 @@
 .blockquote-list {
   --reel-columns: 3;
+  --reel-gap: var(--size-9);
   padding-block-end: var(--size-8);
 }
 
@@ -9,15 +10,15 @@
 
 /* Track */
 .blockquote-list::-webkit-scrollbar-track {
-  border: 3px solid black;
+  border: 3px solid currentColor;
 }
 
 /* Handle */
 .blockquote-list::-webkit-scrollbar-thumb {
-  background: black;
+  background: var(--clr-neutral-12);
 }
 
 /* Handle on hover */
 .blockquote-list::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--clr-neutral-11);
 }

@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Portfolio de Charles Cailleteau.">
     <title>Charles Cailleteau</title>
   </head>
   <body>
-    <header>
+    <header class="bg-neutral-0">
       <nav>
-        <ul class="gap-3">
+        <ul class="gap-3 padding-inline-6">
           <li>
             <a href="#presentation" class="link">
               <span data-content="Hello">
@@ -40,13 +41,13 @@
         </ul>
       </nav>
     </header>
-    <main class="flow | p-b-8" style="--flow-size: 8rem">
-      <section class="presentation | dashed-section main-width m-auto" id="presentation">
-        <h2 class="main-width m-auto">Salut !</h2>
-        <div class="flow | presentation_content">
+    <main class="flow-block-11 | padding-block-8">
+      <section class="presentation | dashed-section wrapper" id="presentation">
+        <h2 class="wrapper">Salut !</h2>
+        <div class="flow-block-6 | presentation_content">
           <p>
             Salut👋 ! Ici
-            <span class="funny-link | italic bold">
+            <span class="funny-link | italic font-weight-8">
               Charles Cailleteau,
               <picture>
                 <img src="/images/moi.jpg" alt=""/>
@@ -56,15 +57,15 @@
             <span is="from-element" data-from="1993-01-09">30 ans</span>
             et suis
                         développeur web. J'ai commencé à programmer il y a
-            <span is="from-element" data-from="2013-01-01">30 ans</span>
+            <span is="from-element" data-from="2013-01-01">10 ans</span>
             pendant mes études aux beaux-arts🖌️. Assez vite, je me suis interressé aux technologies du web, à leurs contraintes et
             possibilités🤩... À l'époque je réalisais des petits jeux-vidéos stupides principalement en javascript. Après mes études
             j'ai enseigné les arts-plastiques au collège pendant cinq ans🧑‍🎓. Le numérique étant une partie importante du
             programme j'en ai profité pour développer des applications que j'utilisais avec mes élèves😁. Il y a
-            <span is="from-element" data-from="2022-09-01">30 ans</span>
+            <span is="from-element" data-from="2022-09-01">environ 1 an</span>
             j'ai décidé de me consacrer pleinement au développement et ai quitté mon travail d'enseignant🏃. Avant celà j'ai
             suivi
-            <a href="#" class="funny-link | italic bold">une formation
+            <a href="#" class="funny-link | italic font-weight-8">une formation
               <picture>
                 <img src="https://www.madeinbebe.com/boutique/uploads/articles/zoom/en-route-cartable-lilliputiens_OA.jpg" alt=""/>
               </picture>
@@ -73,7 +74,7 @@
           </p>
           <p>
             Aujourd'hui je me considère comme un
-            <a href="#" class="funny-link | italic bold">
+            <a href="#" class="funny-link | italic font-weight-8">
               artisan
               <picture>
                 <img
@@ -99,7 +100,7 @@
         </div>
       </section>
       <section id="projets">
-        <h2 class="main-width m-auto">Quelques projets</h2>
+        <h2 class="wrapper">Quelques projets</h2>
         <div class="projects-list">
           @each((project,index) in projects)
             @!component('components/project',{
@@ -109,8 +110,8 @@
         </div>
       </section>
       <section id="talkofme">
-        <h2 class="main-width m-auto">Ils parlent de moi</h2>
-        <div class="reel | blockquote-list | main-width m-auto gap-9">
+        <h2 class="wrapper">Ils parlent de moi</h2>
+        <div class="reel | blockquote-list | wrapper">
           @each(quote in talkofme)
           <blockquote class="blockquote | gap-6">
               <div class="blockquote_sidebar">
@@ -125,10 +126,10 @@
         </div>
       </section>
       <section id="contact" class="">
-        <h2 class="main-width m-auto m-b-6">Me contacter</h2>
-        <div class="space-evenly | main-width m-auto gap-6 flex-wrap">
-          <a href="mailto:charles.cailleteau@gmail.com" class="contact-link">
-            <div class="contact-link_content">
+        <h2 class="wrapper margin-block-6">Me contacter</h2>
+        <div class="fluid-grid | wrapper gap-6 ">
+          <a href="mailto:charles.cailleteau@gmail.com" class="card">
+            <div class="card_content">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 58 42">
                 <path
                   fill-rule="evenodd"
@@ -136,13 +137,13 @@
                   d="M48.6812 4H8.93879L27.8093 22.2815L48.6812 4ZM4 4.78464V38H54V4.65871L29.0588 26.5045L27.6727 27.7185L26.3494
                     26.4365L4 4.78464ZM0 0H4H54H58V4V38V42H54H4H0V38V4V0Z"/>
               </svg>
-              <span class="contact-link_text">
+              <span class="card_text">
                 M'envoyer un email
               </span>
             </div>
           </a>
-          <a href="https://github.com/achtaitaipai" target="_blank" class="contact-link">
-            <div class="contact-link_content">
+          <a href="https://github.com/achtaitaipai" target="_blank" class="card">
+            <div class="card_content">
               <svg viewbox="0 0 16 16" version="1.1" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
                 <path
                   fill-rule="evenodd"
@@ -153,20 +154,20 @@
                     2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
                     1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
               </svg>
-              <span class="contact-link_text">
+              <span class="card_text">
                 Lire du code
               </span>
             </div>
           </a>
-          <a href="https://www.chess.com/member/rattata-sauvage" target="_blank" class="contact-link">
-            <div class="contact-link_content">
+          <a href="https://www.chess.com/member/rattata-sauvage" target="_blank" class="card">
+            <div class="card_content">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
                 <path d="M264 448H56s60-42.743 60-176H84c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h40.209C95.721 210.56 76 181.588 76
                 148c0-46.392 37.608-84 84-84s84 37.608 84 84c0 33.588-19.721 62.56-48.209 76H236c6.627 0 12 5.373 12 12v24c0 6.627-5.373
                 12-12 12h-32c0 133.257 60 176 60 176zm28 16H28c-6.627 0-12 5.373-12 12v24c0 6.627 5.373 12 12 12h264c6.627 0 12-5.373
                 12-12v-24c0-6.627-5.373-12-12-12z"/>
               </svg>
-              <span class="contact-link_text">
+              <span class="card_text">
                 Prendre une raclée
               </span>
             </div>
