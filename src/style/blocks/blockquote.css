@@ -27,5 +27,5 @@
 }
 
 .blockquote_text {
-  max-width: 30ch;
+  min-width: 15ch;
 }

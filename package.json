@@ -1,16 +1,16 @@
 {
   "name": "portfolio",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "publish": "vite build && gh-pages -d dist"
+    "post": "vite build --base https://achtaitaipai.github.io/portfolio && gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",
+    "tsx": "^3.12.3",
     "typescript": "^4.9.3",
     "vite": "4.0.0",
     "vite-plugin-dedale": "^0.0.14"

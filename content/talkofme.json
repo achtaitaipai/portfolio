@@ -23,5 +23,15 @@
     "name": "Rocco Siffredi",
     "quote": "Je me sens si petit à ses côtés !",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Rocco_Siffredi_-_Lucca_Comics_%26_Games_2016.jpg/220px-Rocco_Siffredi_-_Lucca_Comics_%26_Games_2016.jpg"
+  },
+  {
+    "name": "Karl Lagerfeld",
+    "quote": "Ma définition de l'élégance.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Karl_Lagerfeld_2014.jpg/260px-Karl_Lagerfeld_2014.jpg"
+  },
+  {
+    "name": "Cyril Lignac",
+    "quote": "Son gâteau au yaourt est un délice.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Cyril_Lignac_Portraits_Ischia_Paris_2022_%C2%A9Yann_Deret.jpg/260px-Cyril_Lignac_Portraits_Ischia_Paris_2022_%C2%A9Yann_Deret.jpg"
   }
 ]

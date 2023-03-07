@@ -10,7 +10,7 @@
   display: inline-block;
   flex-shrink: 0;
   width: 16.5%;
-  animation: translate-x 4s linear infinite;
+  animation: translate-x 8s linear infinite;
   text-align: center;
 }
 

@@ -46,7 +46,7 @@
 .reel {
   --col-width: max(
     var(--min-width),
-    calc(100% / var(--reel-columns, 2)) - calc(2 * var(--reel-gap, 0rem))
+    calc(100% / var(--reel-columns, 2)) - var(--reel-gap, 0rem)
   );
   display: grid;
   grid-auto-flow: column;
